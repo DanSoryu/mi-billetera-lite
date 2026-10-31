@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Mi Billetera Lite",
+    "slug": "mi-billetera-lite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./public/icons/icon-512.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#f4f6fa",
+    "experiments": {
+      "baseUrl": "/mi-billetera-lite"
+    },
+    "web": {
+      "output": "single",
+      "bundler": "metro",
+      "favicon": "./public/icons/icon-192.png",
+      "backgroundColor": "#f4f6fa"
+    }
+  }
+}

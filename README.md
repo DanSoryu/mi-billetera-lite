@@ -1,26 +1,26 @@
 # Mi Billetera Lite
 
-PWA para registrar gastos diarios sin conexión. Hecha con HTML, CSS y JavaScript, como la práctica `cafeteria` de este espacio de trabajo. No requiere instalar dependencias.
+PWA mínima de gastos hecha con Expo, React Native Web y TypeScript, como `CasaCambio`.
 
-## Funciones
+Aplicación: https://dansoryu.github.io/mi-billetera-lite/
 
-- Registro de concepto, monto y categoría.
-- Historial del gasto más reciente al más antiguo y total acumulado en pesos mexicanos.
-- Datos guardados solo en `localStorage` del navegador.
-- Manifest con íconos instalables y Service Worker que guarda la interfaz para uso sin conexión.
-
-## Ejecutar en desarrollo
-
-Desde esta carpeta:
+## Ejecutar
 
 ```bash
-python -m http.server 8000
+npm install
+npm run web
 ```
 
-Abre `http://localhost:8000`. Para instalarla y usarla fuera del equipo local, publícala en un servidor HTTPS, por ejemplo GitHub Pages.
+## Crear la PWA para publicar
 
-## Comprobar modo sin conexión
+```bash
+npm run build:web
+```
 
-1. Abre la aplicación una vez con conexión y espera a que se registre el Service Worker.
-2. En Chrome DevTools, cambia Network a **Offline** y recarga.
-3. Agrega un gasto, cierra la pestaña y vuelve a abrir la aplicación. El gasto y el total deben permanecer.
+`dist/` contiene la aplicación web, el manifest, los íconos y el Service Worker. Para publicarla en GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+Los gastos se guardan localmente con AsyncStorage. Después de abrir la versión publicada una vez con conexión, puede recargarse y registrar gastos sin red.
